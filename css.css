@@ -4,10 +4,22 @@
 .div0g {
     display: flex;
     flex-wrap: wrap;
+    
 }
 .div1g {
     width: 20%;
-    contain: content;
+    height: max-content;
     text-align: justify;
     padding: 50px;
+}
+.div3g {
+    display: flex;  
+    flex-wrap: wrap; 
+}
+
+.div4g {
+    width: 50%;
+    padding-right: 20%;
+    position:;
+
 }
