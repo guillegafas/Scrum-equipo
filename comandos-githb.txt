@@ -1,0 +1,51 @@
+PS C:\Users\diurno\Desktop\Scrum-equipo> git pull
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ejercicio-flex.html
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\diurno\Desktop\Scrum-equipo> git add *
+PS C:\Users\diurno\Desktop\Scrum-equipo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   ejercicio-flex.html
+
+PS C:\Users\diurno\Desktop\Scrum-equipo> git commit -m "guille"
+Author identity unknown
+
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'diurno@DESKTOP-5DNK94K.(none)')
+PS C:\Users\diurno\Desktop\Scrum-equipo> git config --global user.email "gms23396@gmail.com"
+error: key does not contain a section: global
+PS C:\Users\diurno\Desktop\Scrum-equipo> git commit -m "guille"
+[main b3d8600] guille
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\diurno\Desktop\Scrum-equipo> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\diurno\Desktop\Scrum-equipo> git push
+info: please complete authentication in your browser...
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 279 bytes | 279.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/guillegafas/Scrum-equipo.git
+   6308e46..b3d8600  main -> main
+PS C:\Users\diurno\Desktop\Scrum-equipo> git 
