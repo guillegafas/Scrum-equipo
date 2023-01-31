@@ -1,0 +1,13 @@
+/* NO UTILICEIS EN PRINCIPIO ETIQUETAS PRINCIPALES SI SE PUEDE EVITAR Y PONER SIEMPRE EN CADA CLASE QUE HAGAIS UNA INICIAL*/
+/*estos primeros divs los voy a utilizar para el cuerpo de la pagina principal*/
+
+.div0g {
+    display: flex;
+    flex-wrap: wrap;
+}
+.div1g {
+    width: 20%;
+    contain: content;
+    text-align: justify;
+    padding: 50px;
+}
