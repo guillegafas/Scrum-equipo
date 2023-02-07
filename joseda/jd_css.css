@@ -1,0 +1,63 @@
+.j_caja0{
+    max-width: calc(73.125rem + 1.875rem);
+    margin: auto;
+    width: 100%;
+    padding: 0.9375rem;
+}
+
+.j_caja1{
+    position:relative;
+    padding-top: 1.25rem ;
+    padding-bottom: 1.25rem;
+    background: url(../Lenguaje_marcas/cruz-home.svg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
+}
+
+.j_num{
+    font-size: 9rem;
+    line-height: 13.4375rem;
+    color: black;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.j_pers{
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 3.4375rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+}
+
+.j_num2{
+    font-size: 9rem;
+    line-height: 13.4375rem;
+    color:red;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.j_pers2{
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 3.4375rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+    text-align: right;
+    padding-right: 170px;
+}
+
+/*
+.h3{
+    font-family: 'Montserrat', sans-serif; ---- No entiendo porque no funciona
+}
+*/
