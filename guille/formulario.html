@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cruz Roja</title>
+
+    <style>
+        h1 {
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(224, 88, 43);
+        }
+        img {
+            float: right;
+            margin-left: 35px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Formulario Cruz roja</h1>
+    <img src="trabajo/cruz_roja.jpg"/>
+    <form>
+        Primer nombre <input type="text" name="pnombre"/><br><br>
+        Segundo Nombre <input type="text" name="snombre"/><br><br>
+        Correo <input type="email" name="correo"/><br><br>
+
+        Empleo actual:<br>
+        <input type="radio" name="empleoactual" value="tiempocompleto"> Tiempo completo<br>
+        <input type="radio" name="empleoactual" value="mediodia"> Medio día<br>
+        <input type="radio" name="empleoactual" value="sinempleo"> Sin empleo <br>
+    </br>
+
+        Intereses:<br>
+        <input type="checkbox" name="cb-autos" value="gusta"> Autos<br>
+        <input type="checkbox" name="cb-deportes" value="gusta"> Deportes<br>
+        <input type="checkbox" name="cb-videojuegos" value="gusta"> Videojuegos<br>
+        edad <input type="number" name="edad"/><br>
+           <input type="submit" value="enviar"/> 
+    </form>
+</body>
+</html>
