@@ -19,29 +19,29 @@
 
     </div>
     <form action="danacion">
-        <fieldset style="display: flex;">
+        <fieldset class="j_form" style="display: flex;">
         <div style="flex: 1; padding: 20px;">
-          <legend>Donación a la Cruz Roja</legend>
-          <label for="nombre">Nombre:</label>
+          <legend class="j_leg">Donación a la Cruz Roja</legend>
+          <label class="j_label" for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" placeholder="escriba su nombre" required><br><br>
-          <label for="apellido">Apellido:</label>
+          <label class="j_label" for="apellido">Apellido:</label>
           <input type="text" id="apellido" name="apellido" placeholder="escriba sus apellidos" required><br><br>
-          <label for="email">Correo electrónico:</label>
+          <label class="j_label" for="email">Correo electrónico:</label>
           <input type="email" id="email" name="email" placeholder="ingrese un email" required><br><br>
-          <label for="monto">Monto de la donación:</label>
+          <label class="j_label" for="monto">Monto de la donación:</label>
           <input type="number" id="monto" name="monto" min="1" placeholder="aportacion en euros" required><br><br>
           <input type="submit" value="Hacer donación">
         </div>
         <div style="flex: 1; padding: 20px;">
-            <legend>Información de la donación</legend>
-            <label for="motivo">Motivo de la donacion:</label>
+            <legend class="j_leg">Información de la donación</legend>
+            <label class="j_label" for="motivo">Motivo de la donacion:</label>
             <select id="motivo" name="motivo" required>
                 <option value="">Selecciona una opción</option>
                 <option value="familia">Familia</option>
                 <option value="amigos">amigos</option>
                 <option value="pareja">pareja</option>
             </select><br><br>
-            <label for="frecuencia">Frecuencia de la donación:</label>
+            <label class="j_label" for="frecuencia">Frecuencia de la donación:</label>
             <select id="frecuencia" name="frecuencia" required>
               <option value="">Selecciona una opción</option>
               <option value="una vez">Una vez</option>
