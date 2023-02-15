@@ -20,6 +20,28 @@
 .div4g {
     width: 50%;
     padding-right: 20%;
-    position:;
 
+}
+
+span {
+    color: red;
+}
+
+.h2-f {
+    color: black;
+    font-family: "MontserratBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.f-texto {
+    color: black;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.f-twitter {
+    width: 20%;
+    height: max-content;
+    text-align: justify;
+    padding: 50px;
 }

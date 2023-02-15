@@ -120,3 +120,148 @@
   a:active {
     text-decoration: none;
   }
+
+  .div0g {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.div1g {
+    width: 20%;
+    height: max-content;
+    text-align: justify;
+    padding: 50px;
+}
+.div3g {
+    display: flex;  
+    flex-wrap: wrap; 
+}
+
+.div4g {
+    width: 50%;
+    padding-right: 20%;
+
+}
+
+.j_caja0{
+    max-width: calc(73.125rem + 1.875rem);
+    margin: auto;
+    width: 100%;
+    padding: 0.9375rem;
+}
+
+.j_caja1{
+    position:relative;
+    padding-top: 1.25rem ;
+    padding-bottom: 1.25rem;
+    background: url(./img/cruz-home.svg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
+}
+
+.j_num{
+    font-size: 9rem;
+    line-height: 13.4375rem;
+    color: black;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.j_pers{
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 3.4375rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+}
+
+.j_num2{
+    font-size: 9rem;
+    line-height: 13.4375rem;
+    color:red;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.j_pers2{
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 3.4375rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+    text-align: right;
+    padding-right: 170px;
+}
+
+.j_form {
+    width: 50%;
+    margin: auto;
+}
+
+.j_leg {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.j_label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    padding: 5px;
+    font-size: 1.2em;
+    width: 50%;
+    background-color:lightskyblue;
+}
+  
+input[type="submit"] {
+    padding: 5px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  background-color: #fdfdfd;
+  color: #646464;
+  padding: 30px 0px;
+  font-size: 14px;
+  text-align: left;
+  text-indent: 5%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rojo1 {
+  color: rgb(230, 0, 0)
+}
+.img1 {
+  position: relative;
+  right: 0%;
+}
+.img2 {
+  position: relative;
+  right: -30%;
+  top: -80;
+}
+.img3 {
+  position: relative;
+  right: -60%;
+  top: -170;
+}
