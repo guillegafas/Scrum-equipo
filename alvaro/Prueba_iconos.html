@@ -2,124 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iconos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
     <style>
-        body {
-            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 1rem;
-            color: #646464;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: black;
-            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 0.875rem;
-            line-height: 1.5rem;
-        }
-
-        a {
-            -webkit-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-            cursor: pointer;
-            color: #e20613;
-        }
-
-        img {
-            max-width: 100%;
-            font-style: italic;
-            vertical-align: middle;
-        }
-
-        b,
-        strong {
-            font-weight: bold;
-        }
-
-        .maxwidth {
-            max-width: calc(73.125rem + 1.875rem);
-            margin: 0 auto;
-            width: 100%;
-            padding: 0 0.9375rem;
-        }
-
-        .row {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
-
-
-        .col-md-12 {
-            position: relative;
-            min-height: 1px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .evr-title--left {
-            text-align: left;
-        }
-
-        .evr-title--underline.evr-title--black-red {
-            position: relative;
-            color: black;
-            font-family: "MontserratBold", "Helvetica Neue", Helvetica, Arial,
-                sans-serif;
-            font-size: 2.25rem;
-            line-height: 3.4375rem;
-            margin-left: -0.9375rem;
-            margin-right: -0.9375rem;
-        }
-
-        .evr-title--underline.evr-title--black-red::before {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            content: "";
-            width: 80px;
-            height: 5px;
-            background: #e20613;
-        }
-
-        .evr-title--underline.evr-title--black-red span {
-            color: #e20613;
-        }
-
-        /*pseudo-elementos*/
-
-        .row::before,
-        .row::after {
-            content: " ";
-            display: table;
-        }
-
-        .row::after {
-            clear: both;
-        }
-
-        ::before,
-        ::after {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        /* Al seleccionar sale el texto blanco, fondo rojo*/
-        ::selection {
-            background: #e20613;
-            color: white;
-        }
-
-        /*Container flexbox imagenes*/
         .flex-container {
             display: flex;
         }
@@ -127,7 +14,7 @@
         .box {
             width: 270px;
             height: 203px;
-            margin: 10px;
+            margin-right: 10px;
         }
 
         .box:last-child {
@@ -137,18 +24,6 @@
 </head>
 
 <body>
-    <div class="maxwidth">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="evr-title evr-title--underline evr-title--black-red evr-title--left">
-                    PORTALES DE ATENCIÓN
-                    <span></span>
-                </h2>
-            </div>
-        </div>
-    </div>
-
-    <!--Imagenes Flexbox-->
     <div class="flex-container">
         <div class="box">
             <p><a href="https://www2.cruzroja.es/teacompana"><img
@@ -199,6 +74,7 @@
             <p><a href="https://www2.cruzroja.es/web/cruzroja/infoprevencion">Ver más</a></p>
         </div>
     </div>
+
 </body>
 
 </html>

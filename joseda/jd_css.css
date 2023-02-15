@@ -56,18 +56,18 @@
     padding-right: 170px;
 }
 
-fieldset {
+.j_form {
     width: 50%;
     margin: auto;
 }
 
-legend {
+.j_leg {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
   
-label {
+.j_label {
     font-weight: bold;
     margin-right: 10px;
 }
@@ -78,6 +78,7 @@ input[type="number"] {
     padding: 5px;
     font-size: 1.2em;
     width: 50%;
+    background-color:lightskyblue;
 }
   
 input[type="submit"] {
