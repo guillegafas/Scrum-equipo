@@ -1,189 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .menu {
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./imagenes/salaprensa.png">
 
-      background-color: white;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 120px;
-      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+    <style>
+        .d_herramientas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            
+            background-color: rgb(255, 255, 255);
+            
+        }
+        .d_herramientascentradas {
+            background-color: rgb(255, 255, 255);
+            margin-left: 7%;
+            margin-right: 7%;
+            border-bottom: 0.5px solid rgb(230, 219, 219);
+        }
+        .d_listaherramientas {
+            display:flex; /*Esto dispone los elementos en flex, deslizando a la derecha los siguientes elementos*/
+            justify-content: flex-end; /*esto justifica el texto hasta el final del plex*/
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            width: auto;
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 0.875rem;
+            list-style: none;
+            
+            }
+        .d_enlaceherramienatas {
+           
+            width: auto; /*Esto es necesario junto con el margen a la derecha para que no se solape*/
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            
+            
+            
+        }
+        .d_menu {
+            
+            background-color: rgb(255, 255, 255);
+            font-size: 1.125rem;
+            font-family: "MontserratBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
 
-    .premenu {
-      margin: auto;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
-      align-items: center;
-      background-color: white;
-      width: 1270px;
-      height: 40px;
-      font-size: 0.875rem;
-      color: #000000;
+        }
+        .d_menucentrado {
+           
+            margin: 0 auto;
+            padding: 0rem 0.6375rem 0rem 0.6375rem;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            font-family: "MontserratBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.6875rem;
+            padding: 1.5rem 1.125rem 1.75rem 1.125rem;
+        }
+        .d_logo {
+            
+        }
+        .d_menulistado {
+            background-color: rgb(255, 255, 255);
+            
+            
 
+        }
 
+        .d_listamenu {
+            display:flex; /*Esto dispone los elementos en flex, deslizando a la derecha los siguientes elementos*/
+            justify-content:center; 
+            background-color: rgb(255, 255, 255);
+            list-style: none;
+            
+        }
 
-    }
+        .d_elementolistamenu {
+            width: auto;
+            margin-right: 50px;
+            text-align: center;
 
-    .listado_accesos {
+        }
+            
+        
+        .d_listasubmenu {
 
-      background-color: white;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
-      align-items: baseline;
-      width: 1270px;
-      height: 22px;
-      margin-left: 5%;
-      margin-right: 5%;
+            
+            display: none;
+            
+        
 
-    }
+        }
+        .d_elementolistad_enlacesubelementosubmenumenu:hover .d_listasubmenu .d_elementolistamenu {
+            display: block;
+            transition: 1s;
+        }
+        .d_botones button:first-child {
+            background-color: transparent;
+            border: transparent;
+            font-size: 1.125rem;
+          
+        }
 
-    .cabecera {
+        .d_botones button:nth-child(2) {
+            color: red;
+            border: 1px solid red;
+            font-size: 1.125rem;
+            
+        }
 
-      background-color: #ffffff;
-      width: auto;
-      height: 50px;
-    }
+        .d_botones button:last-child {
+            background-color: red;
+            color: white;
+            border: 1px solid red;
+            font-size: 1.125rem;
+            
+        }
 
-    a:link,
-    a:visited,
-    a:active {
+        .d_enlaceelementolistamenu {
+            text-decoration: none;
+            color: black;
+         
 
-
-      text-decoration: none;
-
-    }
-
-    .lista {
-      list-style-type: none;
-      padding-left: 1em;
-    }
-
-    .icono {
-      background-size: 0.875rem 0.875rem;
-      padding-right: 10px;
-    }
-
-    .padre {
-      clear: both;
-      position: relative;
-      width: auto;
-      height: 130px;
-      align-items: center;
-      background-color: white padding: 20px;
-      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 1.125rem;
-    }
-
-    .header {
-      clear: both;
-      position: relative;
-      top: 0px;
-      left: 0px;
-      display: flex;
-      margin: auto;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: white;
-      max-width: 81.25rem;
-      margin: 0px, 301px;
-    }
-
-    .navul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-    }
-
-    .navil {
-      margin-right: 20px;
-
-    }
-
-    .botones {
-      display: flex;
-
-    }
-
-    .botones button {
-      margin-right: 10px;
-    }
-
-    .enlace,
-    a:link,
-    a:visited,
-    a:active {
-      text-decoration: none;
-    }
-  </style>
+        
+        }
+        .miniicon {
+            margin-right: 5px;
+        }
+        .buscador {
+                -webkit-appearance: button;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="menu">
-    <header class="cabecera">
-
-
-      <div class="premenu">
-        <ul class="listado_accesos">
-          <li class="lista"><img class="icono" src="./imagenes/correo.svg" alt="contacto" width="14px" height="14px"><a
-              href="https://www2.cruzroja.es/contacto">Contacto</a></li>
-          <li class="lista"><img class="icono" src="./imagenes/empleo.svg" alt="intranet" width="14px" height="14px"><a
-              href="https://www2.cruzroja.es/intranet">Intranet</a></li>
-          <li class="lista"> <img class="icono" src="./imagenes/area-privada.svg" alt="identificate" width="14px"
-              height="14px"><a
-              href="https://www2.cruzroja.es/login?p_p_id=com_liferay_login_web_portlet_LoginPortlet&p_p_lifecycle=0&_com_liferay_login_web_portlet_LoginPortlet_redirect=%2Fgroup%2Fcruzroja%2Finicio">Identifícate</a>
-          </li>
-          <li class="lista"><img class="icono" src="./imagenes/salaprensa.png" alt="prensa" width="14px"
-              height="14px"><a href="https://www2.cruzroja.es/sala-de-prensa">Sala de prensa</a></li>
+<div class="d_herramientas">
+    <div class="d_herramientascentradas">
+        <ul class="d_listaherramientas">
+            <li class="d_elementolistaherramientas"><img class="miniicon" src="./imagenes/correo.svg" alt="icon" height=14px><a class="d_enlaceherramienatas" href="www.cruzroja.com">Contacto</a></li>
+            <li class="d_elementolistaherramientas"><img class="miniicon" src="./imagenes/empleo.svg" alt="icon" height=14px><a class="d_enlaceherramienatas" href="www.cruzroja.com">Intranet</a></li>
+            <li class="d_elementolistaherramientas"><img class="miniicon" src="./imagenes/area-privada.svg" alt="icon" height=14px><a class="d_enlaceherramienatas" href="www.cruzroja.com">Identificate</a></li>
+            <li class="d_elementolistaherramientas"><img class="miniicon" src="./imagenes/salaprensa.png" alt="icon" height=14px><a class="d_enlaceherramienatas" href="www.cruzroja.com">Sala de prensa</a></li>
         </ul>
-      </div>
-
-  </div>
-
-  </header>
-  <div class="padre">
-    <div class="header">
-      <div class="logo">
-      
-        <img src="./imagenes/logo.png" alt="logo" height="50">
-      </div>
-      <nav class="navul" class="navil">
-        <ul class="navul">
-          <li class="navil"><a href="https://www2.cruzroja.es/que-hacemos" class="enlace">
-              <h2>Qué hacemos
-            </a></li>
-          <li class="navil"><a href="https://www2.cruzroja.es/que-hacemos" class="enlace">
-              <h2>Colabora
-            </a></li>
-          <li class="navil"><a href="https://www2.cruzroja.es/que-hacemos" class="enlace">
-              <h2>Voluntariado
-            </a></li>
-          <li class="navil"><a href="https://www2.cruzroja.es/que-hacemos" class="enlace">
-              <h2>Fórmate
-            </a></li>
-        </ul>
-      </nav>
-      <div class="botones">
-        <button><img src="" alt="lupa"></button>
-        <button>Haz voluntariado </button>
-        <button>HAZTE SOCIO/A</button>
-      </div>
     </div>
+</div>
+<div class="d_menu">
+<div class="d_menucentrado">
+<div class="d_logo"><img src="./imagenes/logo.png" alt="logo" height="50px"></div>
+<div class="d_menulistado">
+    <ul class="d_listamenu">
+        <li class="d_elementolistamenu"><a class="d_enlaceelementolistamenu" href="">Qué hacemos</a></li>
+            <ul class="d_listasubmenu">
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Socorros</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Inclusion social</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Empleo</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Salud</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Educación</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Medio ambiente</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Actividad internacional</a></li>
+            </ul>
+        <li class="d_elementolistamenu"><a  class="d_enlaceelementolistamenu" href="">Colabora</a></li>
+            <ul class="d_listasubmenu">
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Hazte socio/a</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Haz un donativo</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Campaña de firmas</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Sorteo de oro</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Alianzas con empresas</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Eventos solidarios</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Herencias y legados</a></li>
+            </ul>
+        <li class="d_elementolistamenu"><a class="d_enlaceelementolistamenu" href="">Voluntariado</a></li>
+        <li class="d_elementolistamenu"><a class="d_enlaceelementolistamenu" href="">Fórmate</a></li>
+            <ul class="d_listasubmenu">
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Primeros auxilios</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Cursos para Empresas</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Estudios profesionales</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Cursos para el voluntariado</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">Cursos eLearning</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">D.Humanos - DIH</a></li>
+                <li class="d_subelementosubmenu"><a class="d_enlacesubelementosubmenu" href="www.cruzroja.com">cooperación internacional</a></li>
+            </ul>
+    </ul>
+</div>
+<div class="d_botones">
+    <button class="buscador"><img src="./imagenes/search-black.svg" alt="lupa"></button>
+    <button>Haz voluntariado </button>
+    <button>HAZTE SOCIO/A</button>
   </div>
-
+</div>
+</div>
+</div>
 </body>
-
 </html>
