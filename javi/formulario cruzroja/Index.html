@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro de equipos de fútbol</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        header,
+        main,
+        footer {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 30px 0;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de registro de equipos de fútbol</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Información del equipo</legend>
+                <div>
+                    <label for="nombre">Nombre del equipo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce el nombre del equipo" required>
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad del equipo</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Introduce la ciudad del equipo" required>
+                </div>
+                <div>
+                    <label for="fundacion">Año de fundación</label>
+                    <input type="number" id="fundacion" name="fundacion"
+                        placeholder="Introduce el año de fundación del equipo" min="1800" max="2023" required>
+                </div>
+                <div>
+                    <label for="estadio">Estadio</label>
+                    <input type="text" id="estadio" name="estadio"
+                        placeholder="Introduce el nombre del estadio donde juega el equipo" required>
+                </div>
+            </fieldset>
+            <div class="submit">
+                <button type="submit">Registrar equipo</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Formulario Javier Corbalan</p>
+    </footer>
+</body>
+
+</html>
