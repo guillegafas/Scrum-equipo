@@ -1,0 +1,323 @@
+<html>
+
+<head>
+  <style>
+    .slide {
+      position: relative;
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+      margin-top: 50px;
+      object-fit: cover;
+      
+    }
+
+    .slide-inner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: calc(300px + 3em);
+      object-fit: cover;
+      height: auto;
+    }
+
+    .slide-open:checked+.slide-item {
+      background-repeat: no-repeat;
+      position: static;
+      opacity: 100;
+      object-fit: cover;
+    }
+
+    .slide-item {
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: opacity 0.6s ease-out;
+      transition: opacity 0.6s ease-out;
+      object-fit: cover;
+    }
+
+    .slide-item img {
+      background-repeat: no-repeat;
+      display: block;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .slide-control {
+      background: rgba(0, 0, 0, 0.28);
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+      font-size: 40px;
+      height: 40px;
+      line-height: 35px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      cursor: pointer;
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      text-align: center;
+      width: 40px;
+      z-index: 10;
+    }
+
+    .slide-control.prev {
+      left: 2%;
+    }
+
+    .slide-control.next {
+      right: 2%;
+    }
+
+    .slide-control:hover {
+      background: rgba(0, 0, 0, 0.8);
+      color: #e20404;
+    }
+
+    #slide-1:checked~.control-1,
+    #slide-2:checked~.control-2,
+    #slide-3:checked~.control-3 {
+      display: block;
+    }
+
+    .slide-indicador {
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .slide-indicador li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .slide-circulo {
+      color: #f31313;
+      cursor: pointer;
+      display: block;
+      font-size: 35px;
+    }
+
+    .slide-circulo:hover {
+      color: #e90b0b;
+    }
+
+    #slide-1:checked~.control-1~.slide-indicador li:nth-child(1) .slide-circulo,
+    #slide-2:checked~.control-2~.slide-indicador li:nth-child(2) .slide-circulo,
+    #slide-3:checked~.control-3~.slide-indicador li:nth-child(3) .slide-circulo {
+      color: #7c7a79;
+    }
+
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .container-bar {
+      
+      width: 100%;
+      max-width: 50px;
+      position: fixed;
+      left: 0;
+      top: 25%;
+    }
+
+    .container-bar a {
+      display: block;
+      width: 50px;
+      height: 60px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      transition: all 500ms ease;
+      color: #fff;
+    }
+
+    .container-bar a:hover {
+      background: #000000;
+    }
+
+    .container-bar .fa-facebook {
+     
+      background: #000000;
+      border-radius: 0px 5px 0px 0px;
+    }
+
+    .container-bar .fa-youtube {
+      background: #000000;
+    }
+
+    .container-bar .fa-twitter {
+      background: #000000;
+    }
+
+    .container-bar .fa-instagram {
+      background: #030303;
+    }
+
+    .container-bar .fa-pinterest {
+      background: #000000;
+      border-radius: 0px 0px 5px 0px;
+    }
+    
+    .container-bar .fa-pinterest2 {
+      background: #000000;
+      border-radius: 0px 0px 5px 0px;
+    }
+
+    .container-bar #title {
+      position: absolute;
+      background: #000000;
+      padding: 0px 8px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 15px;
+      top: 12px;
+      left: 0px;
+      transition: all 500ms ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+
+    .container-bar a:hover #title {
+      opacity: 1;
+      visibility: visible;
+      left: 64px;
+    }
+
+    .container-bar #title:after {
+      position: absolute;
+      content: '';
+      border-left: 7px solid transparent;
+      border-right: 6px solid #1c1c1c;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      right: 100%;
+      top: 8px;
+    }
+
+    #btn-social {
+      display: none;
+    }
+
+    .fa-play {
+      cursor: pointer;
+      transition: all 0.4s;
+      font-size: 12px;
+      margin-bottom: 5px;
+      display: inline-block;
+      transform: rotate(180deg);
+      color: #49b0e6;
+    }
+
+    #btn-social:checked~.fa-play {
+      transform: rotate(0deg);
+    }
+
+    .icon-social {
+      transition: all 0.4s;
+      transform: translateX(0%);
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #btn-social:checked~.icon-social {
+      transform: translateX(-100%);
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide">
+    <div class="slide-inner">
+      <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+      <div class="slide-item">
+        <img src="./1.1 (1).png">
+      </div>
+      <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <img src="2.2 (1).png">
+      </div>
+      <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+      <div class="slide-item">
+        <img src="./3.3.PNG">
+
+      </div>
+      <label for="slide-3" class="slide-control prev control-1">‹</label>
+      <label for="slide-2" class="slide-control next control-1">›</label>
+      <label for="slide-1" class="slide-control prev control-2">‹</label>
+      <label for="slide-3" class="slide-control next control-2">›</label>
+      <label for="slide-2" class="slide-control prev control-3">‹</label>
+      <label for="slide-1" class="slide-control next control-3">›</label>
+      <ol class="slide-indicador">
+        <li>
+          <label for="slide-1" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-2" class="slide-circulo">•</label>
+        </li>
+        <li>
+          <label for="slide-3" class="slide-circulo">•</label>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="social">
+    <ul>
+      <li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"></a></li>
+      <li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a></li>
+      <li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"></a></li>
+      <li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"></a></li>
+      <li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li>
+    </ul>
+  </div>
+
+
+  <div class="container-bar">
+    <input type="checkbox" id="btn-social">
+    <label for="btn-social" class="fa fa-play"></label>
+    <div class="icon-social">
+      <a src="" href="https://www.flickr.com/photos/cruz_roja_esp/" class="fa fa-pinterest2"> 
+        <span id="title">Pinterest</span> <img src=""  width="" height="">
+      <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FCruzRoja.es%2F"
+        class="fa fa-facebook">
+        <span id="title">Facebook</span> <img src="./facebook.PNG" width="36px" height="27px">
+      </a>
+      <a href="https://www.youtube.com/user/CruzRoja/" class="fa fa-youtube">
+        <span id="title">Youtube</span> <img src="./youtube.png" width="36px" height="27px">
+      </a>
+      <a href="https://twitter.com/cruzrojaesp?lang=es" class="fa fa-twitter">
+        <span id="title">Twitter</span> <img src="./twitter.PNG" width="45px" height="30px">
+      </a>
+      <a href="https://www.instagram.com/cruzrojaesp/?hl=es" class="fa fa-instagram">
+        <span id="title">Instagram</span> <img src="./instagram.PNG" width="40px" height="28px">
+      </a>
+      <a src="" href="https://www.flickr.com/photos/cruz_roja_esp/" class="fa fa-pinterest">
+        <span id="title">Pinterest</span> <img src="./pinterest.PNG"  width="40px" height="28px">
+      </a>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
